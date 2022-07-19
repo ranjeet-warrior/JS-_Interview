@@ -31,6 +31,30 @@ Ans. Execution context is the concept of describing internal working of a code.I
 Ans. A programming language is said to have first class function if function in that language are treated like other variables a function can be passed
      as an argument to other functions,can be returned by another function and can be assigned as a value to a variable.
      
+6.  What are closures ?
+
+Ans. A closure is the combination of a function bundled together(enclosed) with reference to its surrounding state(the lexical environment).In other words,
+     a closure gives you access to an outer's function scope from an inner function.
+     
+7. Give an example of closures ?
+
+
+Ans.     eg..  function outer(){
+               var a = 10;
+               function inner(){                  //outer function has access to its inner function
+               console.log(a);
+               }
+              return inner; 
+      }
+      outer()();
+    
+8.  Explain call(),apply(),and bind() methods ?
+
+Ans. call() :- call is a function that helps you change the context of invoking function
+     
+     apply() :- apply is very similar to call function,only differnce is that in apply you can pass an array as an argument list
+     
+     bind()  :- bind is a function that helps us create another function that we can execute with the new context of this keyword
 
 
 
