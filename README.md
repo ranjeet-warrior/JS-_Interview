@@ -39,9 +39,9 @@ Ans. A closure is the combination of a function bundled together(enclosed) with 
 7. Give an example of closures ?
 
 
-Ans.     eg..  function outer(){
+Ans.       function outer(){
                var a = 10;
-               function inner(){                  //outer function has access to its inner function
+               function inner(){           
                console.log(a);
                }
               return inner; 
