@@ -16,6 +16,11 @@
 Ans. Spread syntax(...) allows an iterable such as array expression or string to be expanded in place where zero or more arguments(for function calls)
      or elements (for array literals) are expected,or an object expresssions to be executed in place where zero or more key value are expected
      
+      eg.  // const a = [1, 2, 3];
+          // const b = [4, 5, 6];
+         // const c = [...a, ...b];
+         // console.log(c)
+     
 3. Differnce between var,let and const?
 
 Ans. In Javascript users can declare variables using 3 keywords that are var,let and const. var keywor is the oldest keyword introduced in ES-6.
@@ -36,30 +41,11 @@ Ans. Execution context is the concept of describing internal working of a code.I
 Ans. A programming language is said to have first class function if function in that language are treated like other variables a function can be passed
      as an argument to other functions,can be returned by another function and can be assigned as a value to a variable.
      
-6.  What are closures ?
-
-Ans. A closure is the combination of a function bundled together(enclosed) with reference to its surrounding state(the lexical environment).In other words,
-     a closure gives you access to an outer's function scope from an inner function.
+     eg.   const foo = function() {
+           console.log("foobar");
+            }
+          foo(); // Invoke it using the variable
+          // foobar
      
-7. Give an example of closures ?
-
-
-Ans.       function outer(){
-               var a = 10;
-               function inner(){           
-               console.log(a);
-               }
-              return inner; 
-      }
-      outer()();
-    
-8.  Explain call(),apply(),and bind() methods ?
-
-Ans. call() :- call is a function that helps you change the context of invoking function
-     
-     apply() :- apply is very similar to call function,only differnce is that in apply you can pass an array as an argument list
-     
-     bind()  :- bind is a function that helps us create another function that we can execute with the new context of this keyword
-
 
 
