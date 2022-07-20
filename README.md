@@ -6,6 +6,11 @@
 . Ans. Both are comparison opeartors.Main differnce between == and === operator in javascript is that == opeator does the type conversion
        of the operands before comparison whereas === operator compares the values as well as data types of operands
        
+       eg.    var x = 2;
+              var x = "2";
+              (x==y) // Returns true since the value of x and y both are same
+              (x===y) // Returns false since the typeOf x is number and typeOf y is string 
+       
 2. What is spread Opearator?
 
 Ans. Spread syntax(...) allows an iterable such as array expression or string to be expanded in place where zero or more arguments(for function calls)
