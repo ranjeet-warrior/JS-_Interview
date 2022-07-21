@@ -84,5 +84,128 @@ Ans.  DOM stands for Document Object Model. DOM is a programming interface for H
                         
  25. Differnce between undefined vs not defined vs NaN
  
- Ans. 
+ Ans undefined : - It means a variable declared, but not value has been assigned
+                     
+                    let name;
+                    console.log(name); //undefined
+   not defined :- A not defined is a variable which is not declared at a given point of time with declaration keyword like var, let or const.
+                 
+                console.log(b);
+                b = 5;
+               //Output:- "ReferenceError: b is not defined
+               
+  NaN :-   a numeric data type that can be interpreted as a value that is undefined or unrepresentable, especially in floating-point arithmetic.
+            
+           isNaN('hello world');        // true
+           Number.isNaN('hello world'); // false
+           
+ 26. How many opeartors do we have in JS ?
+
+Ans. There are basically 7 categories of opeartors we have in JavaScript. These are 
+     1. Arithmetic Opearators  
+     2. Comparison Operators.   
+     3. Bitwise Operators
+     4. Increment,Decrement Operators
+     5. Logical Operators
+     6. Ternary Operators
+     7. Comma Operators
      
+27. What are pure functions?
+
+Ans. A Pure function is a function (a block of code) that always returns the same result if the same arguments are passed.
+     It does not depend on any state or data change during a program's execution, rather it only depends o its input agreement.
+     
+      function calculateGST( productPrice ) {
+      return productPrice * 0.05;
+      }
+   
+   The above function will always returns the same result,if we pass the same productPrice. In other words its output doesn't get affected by
+   other values/state changes so we can call "calculateGST" as pure function
+   
+   
+ 28. What is callback hell ?
+
+Ans. callback hell is essentially a nested callbacks stacked below one another forming a pyramid structure. Every callback depends (waits for the 
+    promise callback) thereby making a pyramid structure that affects readability and maintainability of code.
+    
+        fs.readdir(source, function (err, files) {
+        if (err) {
+        console.log('Error finding files: ' + err)
+        } else {
+        files.forEach(function (filename, fileIndex) {
+        console.log(filename)
+        gm(source + filename).size(function (err, values) {
+        if (err) {
+          console.log('Error identifying file size: ' + err)
+        } else {
+          console.log(filename + ' : ' + values)
+          aspect = (values.width / values.height)
+          widths.forEach(function (width, widthIndex) {
+            height = Math.round(width / aspect)
+            console.log('resizing ' + filename + 'to ' + height + 'x' + height)
+            this.resize(width, height).write(dest + 'w' + width + '_' + filename, function(err) {
+              if (err) console.log('Error writing file: ' + err)
+            })
+          }.bind(this))
+        }
+      })
+    })
+    }
+    })
+    
+  29. What is promise chaining ?
+
+  Ans. Promise chaining occurs when the callback function returns a promise.It allows you to chain on another then call which will 
+       run when the second promise is fulfilled. Catch can still be called to handle any errors that might occur along the way.    
+  
+                  new Promise(function(resolve, reject) {
+
+                 setTimeout(() => resolve(1), 1000); // (*)
+
+               }).then(function(result) { // (**)
+
+                alert(result); // 1
+              return result * 2;
+
+           }).then(function(result) { // (***)
+
+           alert(result); // 2
+          return result * 2;
+
+        }).then(function(result) {
+
+       alert(result); // 4
+       return result * 2;
+
+});
+
+30. What are arrow function ?
+
+Ans An arrow function is a compact alternative to a traditional function expression, but is limited and can't be use in all situations.  
+
+
+              // Arrow Function
+              (a, b) => {
+               const chuck = 42;
+             return a + b + chuck;
+              }
+              
+ 31.  Give an example of async/await ?
+
+Ans              
+
+
+                 // async function
+                  async function asyncFunc() {
+                 try {
+            // wait until the promise resolves 
+            let result = await promise; 
+
+        console.log(result);
+    }   
+    catch(error) {
+        console.log(error);
+    }
+}
+
+     // calling the async function            
